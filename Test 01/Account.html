@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Mate - Library Management System</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+        <div class="container">
+            <div class="navbar">
+                <div class="logo">
+                    <a href="index.html"><img src="images/library mate.png" width="150px"></a>
+                </div>
+                <nav>
+                    <ul id="MenuItems">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="Account.html">Accounts</a></li>
+                        <li><a href="Add_book.html">Add Book</a></li>
+                        <li><a href="Order.html">Order</a></li>
+                        <li><a href="Remove.html">Remove Students</a></li>
+                        <li><a href="Search_Books.html">Search Books</a></li>
+                        <li><a href="">View Reports</a></li>
+                    </ul>
+                </nav>
+                <img src="images/menu.png" class="menu-icon" onclick="menutoggle()">
+            </div>
+        </div>
+
+    <!----------------- Account Page ------------->
+    <div class="account-page">
+        <div class="container">
+            <div class="row">
+                <div class="col-2">
+                    <img src="images/image_2.jpg" width="100%">
+                </div>
+
+                <div class="col-2">
+                    <div class="form-container">
+                        <div class="form-btn">
+                            <span onclick="login()">Login</span>
+                            <span onclick="register()">Register</span>
+                            <hr id="Indicator">
+                        </div>
+
+                        <form id="LoginForm">
+                            <input type="text" placeholder="Username:">
+                            <input type="email" placeholder="Email:">
+                            <input type="password" placeholder="Password:">
+                            <button type="submit" class="btn">Login</button>
+                            <a href="#">Forget Password?</a>
+                            <a href="C_Password.html" class="btn">Change Password?</a>
+                        </form>
+
+                        <form id="RegisterForm">
+                            <input type="text" placeholder="Full Name:">
+                            <input type="text" placeholder="Student ID:">
+                            <input type="email" placeholder="Email:">
+                            <input type="text" placeholder="Username:">
+                            <input type="password" placeholder="Password:">
+                            <input type="password" placeholder="Confirm Password:">
+                            <button type="submit" class="btn">Register</button>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!--------------- Footer ------------>
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col-2">
+                    <img src="images/library mate2.png">
+                    <p align="center">© Code-Crushers ~ Library Management System.</p>
+                    <p>Our purpose is to enrich lives through seamless access to quality products and unparalleled
+                        shopping experiences.</p>
+                </div>
+            </div><br>
+            <hr>
+        </div>
+    </div>
+
+
+    <!----------JS for toggle menu---------->
+
+    <script>
+        var MenuItems = document.getElementById("MenuItems");
+
+        MenuItems.style.maxHeight = "0px";
+
+        function menutoggle() {
+            if (MenuItems.style.maxHeight == "0px") {
+                MenuItems.style.maxHeight = "200px"
+            }
+            else {
+                MenuItems.style.maxHeight = "0px"
+            }
+        }
+    </script>
+
+    <!----------JS for Toggle Form---------->
+
+    <script>
+
+        var LoginForm = document.getElementById("LoginForm");
+        var RegisterForm = document.getElementById("RegisterForm");
+        var Indicator = document.getElementById("Indicator");
+
+        function register() {
+            RegisterForm.style.transform = "translateX(0px)";
+            LoginForm.style.transform = "translateX(0px)";
+            Indicator.style.transform = "translateX(100px)";
+        }
+
+        function login() {
+            RegisterForm.style.transform = "translateX(300px)";
+            LoginForm.style.transform = "translateX(300px)";
+            Indicator.style.transform = "translateX(0px)";
+        }
+
+    </script>
+</body>
+
+</html>

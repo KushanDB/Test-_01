@@ -1,0 +1,568 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Poppins", sans-serif;
+}
+
+.navbar{
+    display: flex;
+    align-items: center;
+    padding: 2px;
+}
+nav{
+    flex: 1;
+    text-align: right;
+}
+nav ul{
+    display: inline-block;
+    list-style-type: none;
+}
+nav ul li{
+    display: inline-block;
+    margin-right: 20px;
+}
+a{
+    text-decoration: none;
+    color: #4d4b4b;
+}
+p{
+    color: #565656;
+}
+.container{
+    max-width: 1300px;
+    margin: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+.row{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.col-2{
+    flex-basis: 50%;
+    min-width: 300px;
+}
+.col-2 img{
+    max-width: 100%;
+    padding: 50px 40px 100px 50px;
+}
+.col-2 h1{
+    font-size: 50px;
+    line-height: 65px;
+    margin: 40px 0px;
+
+}
+.home_btn{
+    display: inline-block;
+    background: #69B7FF;
+    color: #fff;
+    padding: 8px 30px;
+    margin: 50px 0px;
+    border-radius: 50px;
+    transition: background 0.5s;
+}
+.home_btn:hover{
+    background: #ffbd67;
+}
+
+.btn{
+    width: 80%;
+    display: inline-block;
+    background: #69B7FF;
+    color: #fff;
+    padding: 8px 30px;
+    margin: 50px 0px;
+    border-radius: 50px;
+    transition: background 0.5s;
+}
+
+.btn:hover{
+    background: #ffbd67;
+}
+
+.header{
+    background: radial-gradient(#6dc9ff, #ffffff);
+}
+.header .row{
+    margin-top: 70px;
+}
+
+/*--------- Footer --------*/
+
+.footer{
+    background: #000000;
+    color: #8a8a8a;
+    font-size: 14px;
+    padding: 10px 0px 20px;
+}
+.footer p{
+    color: #8a8a8a;
+}
+.footer h3{
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.footer-col-2 img{
+    width: 180px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    margin-left: 300px;
+    align-items: center;
+
+}
+
+.app-logo{
+    margin-top: 20px;
+}
+.app-logo img{
+    width: 140px;
+}
+
+.menu-icon{
+    width: 28px;
+    margin-left: 20px;
+    display: none;
+}
+
+/*---------Media Query For Menu ----------*/
+
+@media only screen and (max-width: 800px){
+
+    nav ul{
+        position: absolute;
+        top: 70px;
+        left: 0px;
+        background: #333;
+        width: 100%;
+        overflow: hidden;
+        transition: max-height 0.5s;
+    }
+
+    nav ul li{
+        display: block;
+        margin-right: 50px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    nav ul li a{
+        color: #fff;
+    }
+
+    .menu-icon{
+        display: block;
+        cursor: pointer;
+    }
+}
+
+/*------------Account Page------------*/
+
+.account-page{
+    padding: 80px 0px;
+    background: radial-gradient(#7de1ff,#ffffff);
+}
+.form-container{
+    background: #fff;
+    width: 300px;
+    height: 500px;
+    position: relative;
+    text-align: center;
+    padding: 20px 0px;
+    margin: auto;
+    box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+.form-container span{
+    font-weight: bold;
+    padding: 0px 10px;
+    color: #555;
+    cursor: pointer;
+    width: 100px;
+    display:inline-block;
+}
+.form-btn{
+    display: inline-block;
+}
+.form-container form{
+    max-width: 300px;
+    padding: 0px 20px;
+    position: absolute;
+    top: 130px;
+    transition: transform 1s;
+}
+form input{
+    width: 100%;
+    height: 30px;
+    margin: 10px 0px;
+    padding: 0px 10px;
+    border: 1px solid #ccc;
+}
+form .btn{
+    width: 100%;
+    border: none;
+    cursor: pointer;
+    margin: 10px 0px;
+}
+form .btn:focus{
+    outline: none;
+}
+#LoginForm{
+    left: -300px;
+}
+#RegisterForm{
+    left: 0;
+}
+form a{
+    font-size: 12px;
+}
+#Indicator{
+    width: 100px;
+    border: none;
+    background: #ff7f6e;
+    height: 3px;
+    margin-top: 8px;
+    transform: translateX(100px);
+    transition: transform 1s; 
+}
+
+/*----------------Change Password Page---------------*/
+
+.change-password-page{
+    padding: 80px 0px;
+    background: radial-gradient(#2ecbff,#ffffff);
+}
+.change-password{
+    background: #fff;
+    font-size: 12px;
+    width: 300px;
+    height: 450px;
+    position: relative;
+    text-align: center;
+    padding: 20px 20px 0px 20px;
+    margin: 0px 10px 0px 100px;
+    box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+#Indicator-2{
+    width: 100px;
+    border: none;
+    background: #ff7f6e;
+    height: 3px;
+    margin-top: -360px;
+    transform: translateX(80px);
+}
+.form{
+    max-width: 300px;
+    margin: 7px 0px;
+    padding: 0px 10px;
+}
+.change-password h2{
+    font-size: 15px;
+    margin-top: 0px;
+    margin-bottom: 50px;
+    color: #555;
+    padding: 0px 0px 10px 0px;
+    cursor: pointer;
+}
+
+.form input{
+    width: 100%;
+    height: 30px;
+    margin: 10px 0px;
+    padding: 0px 10px;
+    border: 1px solid #ccc;
+}
+
+/*----------------Add Book Page---------------*/
+
+.Add-Book-page{
+    padding: 80px 0px;
+    background: radial-gradient(#69B7FF,#ffffff);
+}
+.Add-Book{
+    background: #fff;
+    font-size: 12px;
+    width: 400px;
+    height: 580px;
+    position: relative;
+    text-align: center;
+    padding: 20px 20px 0px 20px;
+    margin: 0px 10px 0px 100px;
+    box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+#Indicator-3{
+    width: 100px;
+    border: none;
+    background: #ff7f6e;
+    height: 3px;
+    margin-top: -558px;
+    transform: translateX(130px);
+}
+.form{
+    max-width: 500px;
+    margin: 7px 0px;
+    padding: 0px 10px;
+}
+.Add-Book h2{
+    font-size: 15px;
+    margin-top: 0px;
+    margin-bottom: 50px;
+    color: #555;
+    padding: 0px 0px 10px 0px;
+    cursor: pointer;
+}
+
+.form input{
+    width: 100%;
+    height: 30px;
+    margin: 10px 0px;
+    padding: 0px 10px;
+    border: 1px solid #ccc;
+}
+
+/*----------------Order Book Page---------------*/
+
+.Order-Book-page{
+    padding: 80px 0px;
+    background: radial-gradient(#7de1ff,#ffffff);
+}
+.Order-Book{
+    background: #fff;
+    font-size: 12px;
+    width: 550px;
+    height: 580px;
+    position: relative;
+    text-align: center;
+    padding: 20px 20px 0px 20px;
+    margin: 0px 10px 0px 50px;
+    box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+#Indicator-4{
+    width: 100px;
+    border: none;
+    background: #ff7f6e;
+    height: 3px;
+    margin-top: -545px;
+    transform: translateX(206px);
+}
+.form{
+    max-width: 500px;
+    margin: 7px 0px;
+    padding: 0px 10px;
+}
+.Order-Book h2{
+    font-size: 15px;
+    margin-top: 0px;
+    margin-bottom: 50px;
+    color: #555;
+    padding: 0px 0px 10px 0px;
+    cursor: pointer;
+}
+
+.form input{
+    width: 100%;
+    height: 30px;
+    margin: 10px 0px;
+    padding: 0px 10px;
+    border: 1px solid #ccc;
+}
+.form label{
+    font-size: 13px;
+    color: #1057f0;
+    text-align: left;
+    text-transform: none;
+    display: block;
+}
+.Order_form input{
+    width: 50%;
+    height: 30px;
+    margin: 10px 0px;
+    margin-left: -240px;
+    padding: 0px 10px;
+    border: 1px solid #ccc;
+}
+
+.book-row{
+    
+    display: flex;
+    gap: 100px;
+    margin-left: 10px;
+}
+
+.book-col input{
+    width: 100%;
+    height: 30px;
+    margin: 10px 0px;
+    padding: 0px 10px;
+    
+    border: 1px solid #ccc;
+}
+
+/*----------------Remove Student Page---------------*/
+
+.Remove-Student-page{
+    padding: 80px 0px;
+    background: radial-gradient(#69B7FF,#ffffff);
+}
+.Remove-Student{
+    background: #fff;
+    font-size: 12px;
+    width: 500px;
+    height: 480px;
+    position: relative;
+    text-align: center;
+    padding: 20px 20px 0px 20px;
+    margin: 0px 10px 0px 100px;
+    box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+#Indicator-5{
+    width: 130px;
+    border: none;
+    background: #ff7f6e;
+    height: 3px;
+    margin-top: -440px;
+    transform: translateX(165px);
+}
+.form{
+    max-width: 500px;
+    margin: 7px 0px;
+    padding: 0px 10px;
+}
+.Remove-Student h2{
+    font-size: 15px;
+    margin-top: 0px;
+    margin-bottom: 50px;
+    color: #555;
+    padding: 0px 0px 10px 0px;
+    cursor: pointer;
+}
+
+.form input{
+    width: 100%;
+    height: 30px;
+    margin: 10px 0px;
+    padding: 0px 10px;
+    border: 1px solid #ccc;
+}
+textarea {
+    height: 80px;
+    width: 440px;
+    border: 1px solid #ccc;
+}
+/*----------------Search Books Page---------------*/
+
+.Search-Books-page{
+    padding: 80px 0px;
+    background: radial-gradient(#7de1ff,#ffffff);
+}
+.Search-Books{
+    background: #fff;
+    font-size: 12px;
+    width: 350px;
+    height: 450px;
+    position: relative;
+    text-align: center;
+    padding: 20px 20px 0px 20px;
+    margin: 0px 10px 0px 100px;
+    box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+#Indicator-6{
+    width: 110px;
+    border: none;
+    background: #ff7f6e;
+    height: 3px;
+    margin-top: -385px;
+    transform: translateX(100px);
+}
+.form{
+    max-width: 500px;
+    margin: 7px 0px;
+    padding: 0px 10px;
+}
+.Search-Books h2{
+    font-size: 15px;
+    margin-top: 0px;
+    margin-bottom: 50px;
+    color: #555;
+    padding: 0px 0px 10px 0px;
+    cursor: pointer;
+}
+
+.form input{
+    width: 100%;
+    height: 30px;
+    margin: 10px 0px;
+    padding: 0px 10px;
+    border: 1px solid #ccc;
+}
+#category{
+    height: 30px;
+    width: 150px;
+    margin: 10px 0px;
+    padding: 0px 10px;
+    border: 1px solid #ccc;
+    color: #555;
+}
+/*----------------View Reports Page---------------*/
+
+table {
+    width: 650px;
+    height: 200px;
+    border-collapse: collapse;
+    margin: 50px auto;
+    padding: 0px 10px;
+    border-radius:10px
+    
+}
+table, th, td {
+    border: 1px solid #121110;
+    background-color: #ffffff;
+}
+th, td {
+    padding: 1rem;
+    text-align: center;
+}
+th {
+    background: white;
+    color: #555;
+}
+.view-reports{
+    background: radial-gradient(#7de1ff,#ffffff);;
+    font-size: 12px;
+    border-radius: 30px;
+    width: 800px;
+    height: 480px;
+    position: relative;
+    text-align: center;
+    padding: 20px 20px 0px 20px;
+    margin: 0px auto;
+    box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+#Indicator-7{
+    width: 130px;
+    border: none;
+    background: #ff7f6e;
+    height: 3px;
+    margin-top: -295px;
+    transform: translateX(315px);
+}
+
+  
+
+
+
+
+
+
+
